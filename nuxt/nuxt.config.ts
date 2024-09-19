@@ -77,7 +77,6 @@ export default defineNuxtConfig({
 
   css: [
     'primeicons/primeicons.css',
-    '~/assets/primevue-custom-theme.scss',
     '~/assets/css/main.css',
     '~/assets/main.scss',
   ]
