@@ -17,9 +17,9 @@ export default {
     extend: {},
   },
   plugins: [
-    require('tailwindcss/nesting'),
-    require('tailwindcss'),
-    require('autoprefixer'),
+    // require('tailwindcss/nesting'),
+    // require('tailwindcss'),
+    // require('autoprefixer'),
   ],
 }
 
