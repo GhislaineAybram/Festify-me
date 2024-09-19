@@ -71,6 +71,11 @@ export default defineNuxtConfig({
         },
       },
     },
+    build: {
+      rollupOptions: {
+        external: ['@primevue/nuxt-module'],
+      }
+    }
   },
 
   css: [
