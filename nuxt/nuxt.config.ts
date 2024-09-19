@@ -29,6 +29,9 @@ export default defineNuxtConfig({
 
   primevue: {
     usePrimeVue: true,
+    components: {
+      exclude: ['Editor', 'Chart']
+    },
     options: {
       ripple: true,
       inputVariant: 'filled',
