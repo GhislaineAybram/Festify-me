@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model event {
+  id          Int       @default(autoincrement())
+  name        String?
+  description String?
+  location    String?
+  date        DateTime? @db.Date
+  hour        DateTime? @db.Timetz(6)
+  author      Int
+  user        user      @relation(fields: [author], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([author], map: "fk_user_id")
+  @@ignore
+}
+
+model user {
+  firstname      String?
+  lastname       String?
+  email          String?
+  password       String?
+  added_datetime DateTime? @default(now()) @db.Timestamptz(6)
+  id             Int       @id @default(autoincrement())
+  event          event[]   @ignore
+}

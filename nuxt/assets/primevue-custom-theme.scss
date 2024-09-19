@@ -1,0 +1,25 @@
+:root {
+    --p-text-color: #{$grey}; /* Font text color */
+    --p-text-secondary-color: #{$indigo}; /* Muted font text color with a secondary level */
+    --p-primary-color: #{$tangerine}; /* Primary color of the theme */
+    --p-primary-color-text: #{$indigo}; /* Text color when background is primary color */
+
+    --p-border-radius: #{$tangerine}; /* Common border radius of elements */
+    --p-focus-ring: #{$seashell}; /* Box shadow of a focused element */
+    --p-mask-bg: #{$haze}; /* Background of an overlay mask */
+
+    --p-highlight-bg: #{$indigo}; /* Background of a highlighted element */
+    --p-highlight-text-color: #{$tangerine}; /* Text color of a highlighted element */
+
+    // surfaces
+    --p-surface-ground: #{$tangerine}; /* Base ground color */
+    --p-surface-section: #{$seashell}; /* Background color of a section on a ground surface */
+    --p-surface-card: #{$haze}; /* Color of a surface used as a card */
+    --p-surface-overlay: #{$indigo}; /* Color of overlay surfaces */
+    --p-surface-border: #{$tangerine}; /* Color of a divider */
+    --p-surface-hover: #{$seashell}; /* Color of an element in hover state */
+
+    // --p-secondary-color: #{$indigo}; /* Orange foncé */
+    // --p-secondary-color-text: #FFFFFF; /* Couleur de texte secondaire */
+    // --p-content-color: #FFA500;
+  }
