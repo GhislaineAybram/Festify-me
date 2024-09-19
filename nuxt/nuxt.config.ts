@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -22,29 +21,9 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@primevue/nuxt-module',
     'nuxt-auth-utils',
     '@prisma/nuxt'
   ],
-
-  primevue: {
-    usePrimeVue: true,
-    components: {
-      exclude: ['Editor', 'Chart']
-    },
-    options: {
-      ripple: true,
-      inputVariant: 'filled',
-      theme: {
-        preset: Aura,
-        options: {
-          prefix: 'p',
-          darkModeSelector: 'system',
-          cssLayer: false,
-        },
-      },
-    },
-  },
 
   runtimeConfig: {
     bcryptSaltRound: 10,
@@ -74,17 +53,9 @@ export default defineNuxtConfig({
         },
       },
     },
-    build: {
-      rollupOptions: {
-        external: [
-          '@primevue/nuxt-module',
-        ],
-      }
-    }
   },
 
   css: [
-    'primeicons/primeicons.css',
     '~/assets/css/main.css',
   ]
 })
