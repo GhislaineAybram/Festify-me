@@ -28,7 +28,6 @@
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@primevue/nuxt-module": "^4.0.7",
     "@prisma/client": "^5.19.1",
-    "postcss-import": "^16.1.0",
     "prisma": "^5.19.1",
     "sass-embedded": "^1.79.1"
   }
