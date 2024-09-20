@@ -1,29 +1,34 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model event {
+  id          Int       @default(autoincrement())
+  name        String?
+  description String?
+  location    String?
+  date        DateTime? @db.Date
+  hour        DateTime? @db.Timetz(6)
+  author      Int
+  user        user      @relation(fields: [author], references: [id], onDelete: NoAction, onUpdate: NoAction)
 
-            model User {
-              id    Int     @id @default(autoincrement())
-              email String  @unique
-              name  String?
-              posts Post[]
-            }
+  @@index([author], map: "fk_user_id")
+  @@ignore
+}
 
-            model Post {
-              id        Int     @id @default(autoincrement())
-              title     String
-              content   String?
-              published Boolean @default(false)
-              author    User    @relation(fields: [authorId], references: [id])
-              authorId  Int
-            }
-          
+model user {
+  firstname      String?
+  lastname       String?
+  email          String?
+  password       String?
+  added_datetime DateTime? @default(now()) @db.Timestamptz(6)
+  id             Int       @id @default(autoincrement())
+  event          event[]   @ignore
+}
