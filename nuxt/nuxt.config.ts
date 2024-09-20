@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     'nuxt-auth-utils', 
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@prisma/nuxt'
   ]
 })
