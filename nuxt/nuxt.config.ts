@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxtjs/tailwindcss',
     '@prisma/nuxt',
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
   ],
 
   primevue: {
