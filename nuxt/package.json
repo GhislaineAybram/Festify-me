@@ -17,6 +17,7 @@
     "nuxt": "^3.13.0",
     "nuxt-auth-utils": "^0.3.9",
     "pg": "^8.13.0",
+    "prisma": "^5.19.1",
     "vue": "latest",
     "vue-router": "latest"
   },
