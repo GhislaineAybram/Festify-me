@@ -11,17 +11,20 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@primevue/themes": "^4.0.7",
     "@prisma/adapter-pg": "^5.19.1",
     "@prisma/nuxt": "^0.0.35",
     "bcrypt": "^5.1.1",
     "nuxt": "^3.13.0",
     "nuxt-auth-utils": "^0.3.9",
     "pg": "^8.13.0",
+    "primevue": "^4.0.7",
     "prisma": "^5.19.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@primevue/nuxt-module": "^4.0.7",
     "@prisma/client": "^5.19.1"
   }
 }
